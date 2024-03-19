@@ -24,7 +24,7 @@ let users = [
   { id: 2, name: "Kumari", color: "powderblue" },
 ];
 
-async function checkVisisted() {
+async function checkVisited() {
   const result = await db.query("SELECT country_code FROM visited_countries JOIN users ON user.id = user_id WHERE user_id = $1", 
   [currentUserId]
    );
@@ -42,7 +42,7 @@ async function getCurrentUser() {
 }
 
 app.get("/", async (req, res) => {
-  const countries = await checkVisisted();
+  const countries = await checkVisited();
   const currentUser = await getCurrentUser();
   res.render("index.ejs", {
     countries: countries,
