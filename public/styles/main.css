@@ -15,6 +15,23 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+form {
+  border-radius: 20vw;
+}
+
+.nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.nav2 {
+  overflow: hidden;
+  border-radius: 5vw;
+}
+
 .ag-canvas {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -110,6 +127,7 @@ button {
   outline: none;
   font-size: 0;
   text-align: left;
+  border-radius: 3vw;
 }
 .tab-view > input {
   position: absolute;
